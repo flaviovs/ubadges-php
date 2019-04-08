@@ -16,9 +16,9 @@ class UBadges
 
         $hash = md5($name, true);
         return [
-            ord($hash[0]) % self::$dimensions[0],
-            ord($hash[1]) % self::$dimensions[1],
-            ord($hash[2]) % self::$dimensions[2],
+            (ord($hash[0]) % self::$dimensions[0]) + 1,
+            (ord($hash[1]) % self::$dimensions[1]) + 1,
+            (ord($hash[2]) % self::$dimensions[2]) + 1,
         ];
     }
 

@@ -9,11 +9,11 @@ class UBadgesTest extends \PHPUnit\Framework\TestCase
     public function dimensionValuesDataProvider()
     {
         return [
-            ['flávio veloso soares', [6, 64, 2]],
-            ['  flávio veloso soares', [6, 64, 2]],
-            ['flávio veloso soares   ', [6, 64, 2]],
-            ['flávio    veloso    soares', [6, 64, 2]],
-            ['FLÁVIO VELOSO SOARES', [6, 64, 2]],
+            ['flávio veloso soares', [7, 65, 3]],
+            ['  flávio veloso soares', [7, 65, 3]],
+            ['flávio veloso soares   ', [7, 65, 3]],
+            ['flávio    veloso    soares', [7, 65, 3]],
+            ['FLÁVIO VELOSO SOARES', [7, 65, 3]],
         ];
     }
 
@@ -33,7 +33,7 @@ class UBadgesTest extends \PHPUnit\Framework\TestCase
     public function testGetCssClasses()
     {
         return $this->assertEquals(
-            ['ub_1-6', 'ub_2-64', 'ub_3-2'],
+            ['ub_1-7', 'ub_2-65', 'ub_3-3'],
             UBadges::getCssClasses('flávio veloso soares')
         );
     }
